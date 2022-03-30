@@ -2,13 +2,15 @@ menulist_array=["Farmers Fresh Veg Pizza","Double Cheeze margarita","Fiery Panee
 
 function getmenu(){
    var menu;
-   menu='<ol class="menu-list">';
+   menu='<ol class="a">';
    menulist_array.sort();
    for (var i=0;i<menulist_array.length;i++){
+       b=i+1
        menu=menu+"<li>"+menulist_array[i]+"</li>";
    }
    menu=menu+"</ol>";
    document.getElementById("display_menu").innerHTML=menu;
+   console.log(menu);
 }
 function add(){
     var item=document.getElementById("add_item").value;
@@ -27,4 +29,5 @@ function additem(){
     }
     menu=menu="</section>";
     document.getElementById("display_addedmenu").innerHTML=menu;
+    console.log(menu);
 }
